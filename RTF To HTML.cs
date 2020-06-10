@@ -32,10 +32,6 @@ void Main()
 				string[] colorSetItems = c.Split('\\');
 				foreach( var color in colorSetItems)
 				{
-					//color.Dump();
-					//var theColor = color.Split().Select(x => String.Join("", x.TakeWhile(b => char.IsLetter(b)))).ToList();
-					//string s2 = Regex.Replace(color, @"[^A-Z]+", String.Empty);
-					
 					foreach(Match matches in Regex.Matches (color, @"(?'color'[a-z]+)(?'value'[0-9]+)", RegexOptions.None))
 					{
 						string theColor = matches.Groups["color"].ToString();
