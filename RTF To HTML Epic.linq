@@ -1,12 +1,7 @@
-<Query Kind="Program">
-  <Reference>&lt;ProgramFilesX64&gt;\Microsoft SDKs\Azure\.NET SDK\v2.9\bin\plugins\Diagnostics\Newtonsoft.Json.dll</Reference>
-  <Reference>&lt;RuntimeDirectory&gt;\System.Runtime.Serialization.Json.dll</Reference>
-</Query>
-
 void Main()
 {
-	string rtfFile = @"C:\Users\emory_dossmann\OneDrive - Schumacher Clinical Partners\Bon Secours\Document Review\710000818073_36N ENCOUNTER REPORT710000818073_20200514000000_t0 - Copy.rtf";
-	string rtfRefFile = @"C:\Users\emory_dossmann\OneDrive - Schumacher Clinical Partners\Bon Secours\Document Review\RtfReference_copy.json";
+	string rtfFile = @"rtfFile";
+	string rtfRefFile = @"rtfref.json";
 	
 	var rtfText = File.ReadAllText(rtfFile);
 	string[] rtfTextLines = rtfText.Split(new[] { "\r\n"}, StringSplitOptions.None);
